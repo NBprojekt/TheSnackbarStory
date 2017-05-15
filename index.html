@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head> 
+        <!-- Titel und Icon -->
+        <title>Die Geschichte einer kleinen Snackbar</title>
+
+        <!-- Meta-Angaben -->
+        <meta name="autor" content="Norbert Bartko">
+        <meta name="robots" content="nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Eine Seite um mit SnackBars rum zu experimentieren">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+            <!-- Einbinden von Css und Js-->
+        <script type="text/javascript" src="snackScript.js"></script> 
+        <link href="snackStyles.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+        <!-- Die Snackbar und ihr Inhalt -->
+        <div id="dieGeschichte">
+            <p id="geschichtsText"> 
+                Unsere heutige Geschichte lautet
+            </p> 
+        </div> 
+        
+        <!-- Ein Timer um anzuzeigen wie viel Zeit man auf dieser Seite verbringt -->
+        <div id="timer">
+            <p style="font-size: 400%;text-align: center;padding-top: 2em"> 
+                So viel Zeit haben Sie schon auf dieser Seite verschwendet:</p>
+            <p style="font-size: 150%;text-align: center;"> 
+                <strong id="min">0</strong> Minuten &#160;&#160;&#160;&#160;
+                <strong id="sek">0</strong> Sekunden
+            </p>
+            <p id="hinweis">
+                 Wow 10 Minuten und du gammelst hier immernoch ...
+            </p>
+        </div>
+        
+    </body>
+</html>

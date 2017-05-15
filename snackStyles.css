@@ -1,0 +1,77 @@
+
+    /**
+      *     Die Styles Einstellungen für eine schön 
+      *     aussehende Snackbar, und die dazugehörigen
+      *     ein- und ausblend animationen.
+      */
+
+
+        /* Die Snackbar soll am Linken Bildschrimrand dargestellt werden*/
+    #dieGeschichte {
+            /* Das Aussehen der Snackbar */
+        visibility: hidden;     /* Beim laden der Seite ist die Snackbox zuerst unsichtbar */
+        min-width: 300px;       /* Mindestgröße des Bildschirmes */
+        width: 50%;             /* Breite der Snackbox */
+        margin-left: -25%;      /* Zentrieren der Textbox */
+        background-color: #444; /* Grauliche Hintergrundfarbe */  
+        border-radius: 25px;    /* Ein Abgerundeter Ramen */
+        padding-top: 5px;       /* Innenabstand nach oben */
+        padding-bottom: 5px;    /* Innenabstand nach unten */
+        padding-left: 15px;     /* Innenabstand nach links */
+        padding-right: 15px;    /* Innenabstand nach rechts */
+        position: fixed;        /* Die Box hat eine feste Position */
+        left: 50%;              /* 50% abstand nach links */
+        bottom: 30px;           /* 30px abstand nach unten */
+        
+        
+            /* Die Formatierung des Textes */
+        font-family: "Gill Sans W04", "Gill Sans", "Gill Sans MT";    /* Text-Art */
+        font-size: 1.2em;       /* Textgröße */ 
+        font-weight: bolder;    /* Schrift gewicht */
+        line-height: 1em;       /* Höche der Zeilen */
+        color: #fff;            /* Schriftfarbe */ 
+        text-align: center;     /* Schrift Zentrieren */
+    }
+
+        /* Die snackbar aufrufen wenn die Seite geladen wurde (class wird durch JavaScript hinzugefügt) */
+    #dieGeschichte.punktShow {
+        visibility: visible; /* Die Snackbar sichtbar machen */
+
+        /* hinzufügen der Animation das die Snackbar ein- und ausfliegt */
+        /* ! Wichtig ! der letzte Wert muss 2.5 weniger betragen als der
+           timeout Wert der JS Funktion */
+        -webkit-animation: einblenden 2s, ausblenden 2s 6s;
+        animation: einblenden 2s, ausblenden 2s 6s;
+    }
+    #ende{
+        /* Der LEtzt Text wird in einer anderen farbe und größe dargestellt */
+        font-size: 1.7em; 
+        font-family: "Snell Roundhand", "Brush Script Std", "Brush Script MT", "Apple Chancery", "Caflisch Script Pro";
+    } 
+    #hinweis {
+        visibility: hidden;
+        text-align: center;
+    }
+        /* Animation zum ein und aus blenden der Snackbar mit @keyframes animationen.
+         * Die animation ist das verschieben eines Objektes nach oben und unten in einem  
+         * gewissen Zeiraum.
+         */
+    @-webkit-keyframes einblenden {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+    }
+
+    @keyframes einblenden {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+    }
+
+    @-webkit-keyframes ausblenden {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+    }
+
+    @keyframes ausblenden {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+    }
